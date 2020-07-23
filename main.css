@@ -1,0 +1,106 @@
+body {
+    background-color: white;
+    color: grey;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#pets {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 80%;
+   
+    
+}
+.pet {
+    
+    text-align: center;
+    border: 1px solid gray;
+    width: 40%;
+    margin: 10px;
+    position: relative;
+    
+}
+
+.name {
+    background-color: lightgrey;
+    color: darkgray;
+}
+
+.image {
+    width: 30%;
+    border: 1px solid lightgray;
+    padding: 10px;
+    background-color: gray;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.cat-type {
+    background-color: lightgoldenrodyellow;
+    color: blue;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.dog-type {
+    background-color: lightskyblue;
+    color:gray;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.dino-type {
+    background-color: #d1d1d1;
+    color: gray;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.button-container {
+    
+    justify-content: center;
+    width: 80%;
+    position: relative;
+}
+
+.filters {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#dogbutton {
+width: 10%;
+background-color: green;
+}
+
+#catbutton {
+    width: 10%;
+    background-color: red;
+    
+}
+
+#dinobutton {
+    width: 10%;
+    background-color: blue;
+
+}
+
+#allbutton {
+    width: 10%;
+    background-color: black;
+    
+}
+
+.button {
+    width:100px;
+    height:20px;
+    margin: 5px 20px;
+    border-radius: 50px;
+    text-align:center;
+    font-size:14px;
+    padding:5px;
+    color: white;
+}
