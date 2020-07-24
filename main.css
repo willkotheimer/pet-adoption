@@ -69,27 +69,29 @@ body {
 .filters {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    width: 80%;
 }
 
 #dogbutton {
-width: 10%;
+width: 11%;
 background-color: green;
 }
 
 #catbutton {
-    width: 10%;
+    width: 11%;
     background-color: red;
     
 }
 
 #dinobutton {
-    width: 10%;
+    width: 11%;
     background-color: blue;
 
 }
 
 #allbutton {
-    width: 10%;
+    width: 11%;
     background-color: black;
     
 }
@@ -103,4 +105,16 @@ background-color: green;
     font-size:14px;
     padding:5px;
     color: white;
+}
+
+header {
+    justify-content: center;
+    width: 80%;
+   
+}
+header h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: brown;
+    font-weight: 500;
+    text-align: center;
 }

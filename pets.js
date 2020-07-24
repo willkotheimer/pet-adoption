@@ -213,33 +213,12 @@ const pets = [
     }
 ];
 
-const makePets = () => {
+const makePets = (animal = 'all') => {
     let myPets = "";
 
     for (let p = 0; p < pets.length; p++) {
-        // if ((kind !== 'all') && (pets[p].type != kind)) {
-        //     continue;
 
-        // }
-
-        myPets += ` <div class="pet">
-                <div class="name"> ${pets[p].name} </div>
-                 <img class="image" src='${pets[p].imageUrl}'/>
-                <div class="color">${pets[p].color}</div>
-                <div class="description">${pets[p].specialSkill}</div>
-                <div class="type ${pets[p].type}-type">${pets[p].type}</div>
-            </div>`;
-
-    }
-
-    drawPets(myPets);
-}
-
-
-const makeDogs = () => {
-    let myPets = "";
-    for (let p = 0; p < pets.length; p++) {
-        if (pets[p].type != 'dog') {
+        if ((animal !== 'all') && (pets[p].type != animal)) {
             continue;
         }
 
@@ -255,72 +234,43 @@ const makeDogs = () => {
 
     drawPets(myPets);
 }
-
 
 const makeCats = () => {
-    let myPets = "";
-    for (let p = 0; p < pets.length; p++) {
-        if (pets[p].type != 'cat') {
-            continue;
-        }
-
-        myPets += ` <div class="pet">
-                <div class="name"> ${pets[p].name} </div>
-                 <img class="image" src='${pets[p].imageUrl}'/>
-                <div class="color">${pets[p].color}</div>
-                <div class="description">${pets[p].specialSkill}</div>
-                <div class="type ${pets[p].type}-type">${pets[p].type}</div>
-            </div>`;
-
-    }
-
-    drawPets(myPets);
+    const animal = 'cat';
+    makePets(animal);
 }
 
+const makeDogs = () => {
+    const animal = 'dog';
+    makePets(animal);
+}
 
 const makeDinos = () => {
-    let myPets = "";
-    for (let p = 0; p < pets.length; p++) {
-        if (pets[p].type != 'dino') {
-            continue;
-        }
-
-        myPets += ` <div class="pet">
-                <div class="name"> ${pets[p].name} </div>
-                 <img class="image" src='${pets[p].imageUrl}'/>
-                <div class="color">${pets[p].color}</div>
-                <div class="description">${pets[p].specialSkill}</div>
-                <div class="type ${pets[p].type}-type">${pets[p].type}</div>
-            </div>`;
-
-    }
-
-    drawPets(myPets);
+    const animal = 'dino';
+    makePets(animal);
 }
 
+const makeAll = () => {
+    const animal = 'all';
+    makePets(animal);
+}
 
 const drawPets = (allmypets) => {
     var element = document.getElementById('pets');
     element.innerHTML = allmypets;
 }
 
-
-
 const addEvents = () => {
 
     const dogbutton = document.getElementById('dogbutton').addEventListener('click', makeDogs);
     const catbutton = document.getElementById('catbutton').addEventListener('click', makeCats);
     const dinobutton = document.getElementById('dinobutton').addEventListener('click', makeDinos);
-    const allbutton = document.getElementById('allbutton').addEventListener('click', makePets);
+    const allbutton = document.getElementById('allbutton').addEventListener('click', makeAll);
 }
 
 const init1 = () => {
-
-
     makePets();
     addEvents();
-
-
 }
 
 init1();
