@@ -19,7 +19,11 @@ HTML5, CSS3, Flexbox, Javascript ES6
 
 ## Screenshots
 
+**Html Site**
+
 ![](https://github.com/willkotheimer/pet-adoption/blob/master/petadoption1.PNG)
+
+**Single Page App**
 
 ![](https://github.com/willkotheimer/pet-adoption/blob/master/petadoption2.PNG)
 
